@@ -13,6 +13,9 @@ int main() {
 	// Création d'un moteur générique avec une puissance
 	Moteur moteurGenerique("150"); // Exemple de puissance
 
+	// Création d'un moteur générique avec une puissance
+	Moteur moteurGenerique("150"); // Exemple de puissance
+
     // Affichage des propriétés
     std::cout << "Moteur Electrique - Tension max: " << moteurElectrique.getTensionMax() << " V" << std::endl;
     std::cout << "Moteur Thermique - Cylindree: " << moteurThermique.getCylindree() << " cm3" << std::endl;
