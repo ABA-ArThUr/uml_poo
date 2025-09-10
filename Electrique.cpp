@@ -29,7 +29,7 @@ Electrique::Electrique() {
  *
  * \param de la tension pour le moteur Electrique
  */
-Electrique::Electrique(std::string Tension {
+Electrique::Electrique(std::string Tension) {
 	this->TensionMax = Tension;
 }
 
