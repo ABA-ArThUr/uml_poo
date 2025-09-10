@@ -32,7 +32,7 @@ public:
     Thermique(const Thermique& miss);
     Thermique& operator = (const Thermique& miss);
     Thermique(std::string personne);
-    std::string getCylindree();
+	std::string getCylindree();
     void setCylindree(std::string nouveauCylindree);
 }; // <-- Ajout du '}' manquant ici
 
