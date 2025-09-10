@@ -3,7 +3,7 @@
 
 int main() {
     // Création d’un conducteur
-    Conducteur conducteur("Viland", "Pierre", 1980);
+    Conducteur conducteur("Viland", "Pierre", 1984);
 
     // Test des getters
     std::cout << "Nom : " << conducteur.getNom() << std::endl;
