@@ -2,28 +2,30 @@
 #define CONDUCTEUR_H
 
 #include <string>
-#include <vector>
-//#include "Moto.h"
 
-/**
- * @brief Classe représentant un conducteur.
- */
 class Conducteur {
 private:
     std::string nom;
     std::string prenom;
     int anneeNaissance;
-   // std::vector<Moto*> motos; etoile car plusieur moto 
 
 public:
+    
     Conducteur(const std::string& nom, const std::string& prenom, int anneeNaissance);
 
+    // Getters
     std::string getNom() const;
     std::string getPrenom() const;
-    int getAnneeNaissance() const;   
+    int getAnneeNaissance() const;
     int getAge() const;
 
-    void Conducteur::setNom(const std::string& n) { nom = n; }
-    void Conducteur::setPrenom(const std::string& p) { prenom = p; }
+    
+    void setNom(const std::string& n);
+    void setPrenom(const std::string& p);
     void setAnneeNaissance(int annee);
 
+   
+    void afficherInfos() const;
+};
+
+#endif 
