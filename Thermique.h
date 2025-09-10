@@ -22,7 +22,6 @@ private:
      * Membre prive Cylindree : contient le nombre de personnes pour la Thermique
      */
     std::string Cylindree;
-    /**
 
 protected:
 
@@ -35,5 +34,6 @@ public:
     Thermique(std::string personne);
     std::string getCylindree();
     void setCylindree(std::string nouveauCylindree);
+}; // <-- Ajout du '}' manquant ici
 
 #endif
