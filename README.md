@@ -1,1 +1,1 @@
-# uml_poo
+git clone --single-branch --branch <branch_name> <repository_url>
