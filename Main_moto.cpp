@@ -8,7 +8,7 @@ int main() {
     Electrique moteurElectrique("220"); // Exemple de tension max
 
     // Création d'un moteur thermique avec une cylindrée
-    Thermique moteurThermique("600"); // Exemple de cylindrée
+    Thermique moteurThermique("600"); // Exemple de cylindree
 
 	// Création d'un moteur générique avec une puissance
 	Moteur moteurGenerique("150"); // Exemple de puissance
