@@ -1,31 +1,90 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Conducteur", "Conducteur\Conducteur.vcxproj", "{9EC2FEB9-D7AF-472F-86B0-DD8653730633}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Debug|x64.ActiveCfg = Debug|x64
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Debug|x64.Build.0 = Debug|x64
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Debug|x86.ActiveCfg = Debug|Win32
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Debug|x86.Build.0 = Debug|Win32
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Release|x64.ActiveCfg = Release|x64
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Release|x64.Build.0 = Release|x64
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Release|x86.ActiveCfg = Release|Win32
-		{9EC2FEB9-D7AF-472F-86B0-DD8653730633}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4F5D7F93-0BBA-4247-9387-FA2AAFE3AB88}
-	EndGlobalSection
-EndGlobal
+﻿/*****************************************************************//**
+ * \file   Electrique.cpp
+ * \brief  Definition de la classe Electrique
+ *
+ * \author arthur
+ * \version 0.1
+ * \date   september 2025
+ *
+ * Programme Cpp permettant de creer des objets pour décrire les moteurs Electriques
+ *********************************************************************/
+
+#include "Electrique.h"
+
+
+
+using namespace std;
+
+/**
+ * \brief Constructeur par default
+ * \li TensionMax = inconnu
+ */
+Electrique::Electrique() {
+
+	this->TensionMax = "inconnu";
+}
+
+/**
+ * \brief Constructeur avec parametres rentres en argument
+ *
+ * \param de la tension pour le moteur Electrique
+ */
+Electrique::Electrique(std::string Tension {
+	this->TensionMax = Tension;
+}
+
+
+/**
+ * \brief Destructeur
+ *
+ */
+Electrique::~Electrique() {
+
+	cout << "Destrcution du moteur Electrique" << this->TensionMax << endl;
+}
+
+/**
+ * \brief Constructeur de copie
+ *
+ * \param entre Objet de type Electrique
+ */
+Electrique::Electrique(const Electrique& miss)
+{
+	cout << "Copie du moteur" << endl;
+	this->TensionMax = miss.TensionMax;
+}
+
+/**
+ * \brief Operateur d'affectation
+ *
+ * \param entre Objet de type Electrique
+ * \return Nouvelle objet de type Electrique
+ */
+Electrique& Electrique::operator=(const Electrique& miss)
+{
+	cout << "Affectation du moteur Electrique" << std::endl;
+	if (this != &miss)  // Pour éviter que l'on ne se recopie pas...
+	{
+		this->TensionMax = miss.TensionMax;
+	}
+	return *this;
+}
+
+/**
+ * \brief Accesseur de l'attribut TensionMax
+ *
+ * \return du moteur Electrique
+ */
+std::string Electrique::getTensionMax()
+{
+	return this->TensionMax;
+}
+
+/**
+ * \brief Mutateur de l'attribut TensionMax
+ *
+ * \param NouveauMoteur NouveauMoteurElectrique
+ */
+void  Electrique::setTensionMax(std::string NouveauMoteur) {
+	this->TensionMax = NouveauMoteur;
+}
