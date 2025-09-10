@@ -29,7 +29,7 @@ Thermique::Thermique() {
  *
  * \param de la Cylindre pour le moteur Thermique
  */
-Thermique::Thermique(std::string Cylindre{
+Thermique::Thermique(std::string Cylindre) {
 	this->Cylindree = Cylindre;
 	}
 
