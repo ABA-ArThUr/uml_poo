@@ -22,7 +22,6 @@ private:
      * Membre prive TensionMax : contient le nombre de personnes pour la Electrique
      */
     std::string TensionMax;
-    /**
 
 protected:
 
@@ -36,4 +35,5 @@ public:
     std::string getTensionMax();
     void setTensionMax(std::string nouveauTensionMax);
 
-#endif
+#endif// Ajout de l'accolade fermante manquante pour la classe Electrique
+};
