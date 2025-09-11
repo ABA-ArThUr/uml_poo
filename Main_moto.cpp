@@ -2,21 +2,19 @@
 #include "Electrique.h"
 #include "Thermique.h"
 #include "Moteur.h"
+#include "Moto.h"
 
 int main() {
-    // Création d'un moteur électrique avec une tension maximale
-    Electrique moteurElectrique("220"); // Exemple de tension max
+    Electrique moteurElectrique("220");
 
-    // Création d'un moteur thermique avec une cylindrée
-    Thermique moteurThermique("600"); // Exemple de cylindree
+    Thermique moteurThermique("600");
 
-	// Création d'un moteur générique avec une puissance
-	Moteur moteurGenerique("150"); // Exemple de puissance
+	Moteur moteurGenerique("150"); 
 
-	// Création d'un moteur générique avec une puissance
-	Moteur moteurGenerique("150"); // Exemple de puissance
+	Moteur moteurGenerique("150");
 
-    // Affichage des propriétés
+	Moto maMoto("180 kg", "Moteur Electrique");
+
     std::cout << "Moteur Electrique - Tension max: " << moteurElectrique.getTensionMax() << " V" << std::endl;
     std::cout << "Moteur Thermique - Cylindree: " << moteurThermique.getCylindree() << " cm3" << std::endl;
 	std::cout << "Moteur Generique - Puissance: " << moteurGenerique.getPuissance() << " CV" << std::endl;
