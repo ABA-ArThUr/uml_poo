@@ -10,108 +10,49 @@
  *********************************************************************/
 
 #include "Moto.h"
-#include "Moteur.h"
-
-
 
 using namespace std;
 
 /**
  * \brief Constructeur par default
  * \li poids = inconnu
- * \li moteur = inconnu
+ * \li Moto = inconnu
  */
 Moto::Moto() {
 
 	this->Poids = "inconnu";
-	this->Moteur = "inconnu";
 }
 
-/**
- * \brief Constructeur avec parametres rentres en argument
- *
- * \param du poids pour la moto
- * \param du moteur pour la moto
- */
-Moto::Moto(std::string Poids, std::string Moteur) {
+Moto::Moto(std::string Poids) {
 	this->Poids = Poids;
-	this->Moteur = Moteur;
 }
 
-
-/**
- * \brief Destructeur
- *
- */
 Moto::~Moto() {
 
-	cout << "Destrcution du Moto Moto" << this->Poids << " " << this->Moteur << endl;
+	cout << "Destrcution du Moto Moto" << this->Poids << endl;
 }
 
-/**
- * \brief Constructeur de copie
- *
- * \param entre Objet de type Moto
- */
 Moto::Moto(const Moto& miss)
 {
-	cout << "Copie de la Moto" << endl;
+	cout << "Copie du Moto Moto" << endl;
 	this->Poids = miss.Poids;
-	this->Moteur = miss.Moteur;
 }
 
-/**
- * \brief Operateur d'affectation
- *
- * \param entre Objet de type Moto
- * \return Nouvelle objet de type Moto
- */
 Moto& Moto::operator=(const Moto& miss)
 {
-	cout << "Affectation de la Moto" << std::endl;
-	if (this != &miss)
+	cout << "Affectation du Moto Moto" << std::endl;
+	if (this != &miss)  
 	{
 		this->Poids = miss.Poids;
-		this->Moteur = miss.Moteur;
 	}
 	return *this;
 }
 
-
-/**
-* \brief Accesseur de l'attribut Moteur
-*
-* \return de la Moto
-*/
-std::string Moto::getMoteur()
-{
-	return this->Moteur;
-}
-
-/**
- * \brief Accesseur de l'attribut Poids
- *
- * \return du Moto Moto
- */
 std::string Moto::getPoids()
 {
 	return this->Poids;
 }
 
-/**
- * \brief Mutateur de l'attribut Moteur
- *
- * \param NouveauMoto NouveauMoteur
- */
-void  Moto::setMoteur(std::string NouveauMoteur) {
-	this->Moteur = NouveauMoteur;
-}
-
-/**
- * \brief Mutateur de l'attribut Poids
- *
- * \param NouveauMoto NouveauPoids
- */
-void  Moto::setPoids(std::string NouveauPoids) {
-	this->Poids = NouveauPoids;
+void  Moto::setPoids(std::string NouveauMoto) {
+	this->Poids = NouveauMoto;
 }
