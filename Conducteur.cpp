@@ -1,56 +1,56 @@
-﻿#include "Conducteur.h"
-#include <iostream>
-#include <chrono>
-#include <ctime>
+﻿/*****************************************************************//**
+ * \file   Conducteur.cpp
+ * \brief  Definition de la classe Conducteur
+ *
+ * \author [Ton Nom]
+ * \date   September 2025
+ ********************************************************************/
 
-Conducteur::Conducteur(const std::string& nom, const std::string& prenom, int anneeNaissance)
-    : nom(nom), prenom(prenom), anneeNaissance(anneeNaissance) {
+#include "Conducteur.h"
+
+using namespace std;
+
+// Constructeur par defaut
+Conducteur::Conducteur() {
+    this->nom = "inconnu";
+    this->prenom = "inconnu";
+    this->anneeNaissance = 0;
 }
 
-std::string Conducteur::getNom() const { return nom; }
-std::string Conducteur::getPrenom() const { return prenom; }
-int Conducteur::getAnneeNaissance() const { return anneeNaissance; }
-
-void Conducteur::setNom(const std::string& n) { nom = n; }
-void Conducteur::setPrenom(const std::string& p) { prenom = p; }
-void Conducteur::setAnneeNaissance(int annee) { anneeNaissance = annee; }
-// création avec chat gpt d'un calcul d'age a partir de la naissance
-int Conducteur::getAge() const {
-    using namespace std::chrono;
-    auto now = system_clock::now();
-    std::time_t tt = system_clock::to_time_t(now);
-
-    std::tm local_tm;
-#if defined(_WIN32) || defined(_WIN64)
-    localtime_s(&local_tm, &tt);
-#else
-    localtime_r(&tt, &local_tm);
-#endif
-
-    int currentYear = local_tm.tm_year + 1900;
-    return currentYear - anneeNaissance;
+// Constructeur avec parametres
+Conducteur::Conducteur(string nom, string prenom, int anneeNaissance) {
+    this->nom = nom;
+    this->prenom = prenom;
+    this->anneeNaissance = anneeNaissance;
 }
-// ajouter moto 
-void Conducteur::ajouterMoto(Moto* m) {   //ajouter moto a la collection du conducteur
+
+// Destructeur
+Conducteur::~Conducteur() {
+    cout << "Destruction du conducteur " << this->prenom << " " << this->nom << endl;
+}
+
+// Getters
+string Conducteur::getNom() { return this->nom; }
+string Conducteur::getPrenom() { return this->prenom; }
+int Conducteur::getAnneeNaissance() { return this->anneeNaissance; }
+
+// Setters
+void Conducteur::setNom(string nouveauNom) { this->nom = nouveauNom; }
+void Conducteur::setPrenom(string nouveauPrenom) { this->prenom = nouveauPrenom; }
+void Conducteur::setAnneeNaissance(int annee) { this->anneeNaissance = annee; }
+
+// Ajouter une moto
+void Conducteur::ajouterMoto(const Moto& m) {
     motos.push_back(m);
 }
-//supprimer moto    chercher la moto pour la retiré du garage du conducteur
-void Conducteur::retirerMoto(Moto* m) {
-    for (auto it = motos.begin(); it != motos.end(); ++it) {
-        if (*it == m) {
-            motos.erase(it);
-            break;
-        }
-    }
-}
 
-void Conducteur::afficherInfos() const {
-    std::cout << "Conducteur : " << prenom << " " << nom << std::endl;
-    std::cout << "Année de naissance : " << anneeNaissance
-        << " (Âge : " << getAge() << " ans)" << std::endl;
+// Afficher toutes les infos
+void Conducteur::afficherInfos() {
+    cout << "Conducteur : " << this->prenom << " " << this->nom << endl;
+    cout << "Annee de naissance : " << this->anneeNaissance << endl;
+    cout << "Possede " << motos.size() << " moto(s) :" << endl;
 
-    std::cout << "Possède " << motos.size() << " moto(s) :" << std::endl;
-    for (const auto& moto : motos) {
-        moto->afficherInfos();
+    for (auto& m : motos) {
+        cout << "- Moto poids : " << m.getPoids() << endl;
     }
 }
