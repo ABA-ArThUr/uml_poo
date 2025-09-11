@@ -1,33 +1,23 @@
 #include <iostream>
 #include "Conducteur.h"
-//+#include "Moto.h"
+#include "Moto.h"
 
+using namespace std;
 
 int main() {
+    // Creation d’un conducteur
+    Conducteur c("Dupont", "Jean", 1990);
 
-	//conducteur
-	Conducteur conducteur("Viland", "Pierre", 1984); //initialisation du conducteur avec nom prenom et année de naissance
+    // Creation de motos
+    Moto m1("200kg");
+    Moto m2("150kg");
 
-	/*std::cout << "Nom : " << conducteur.getNom() << std::endl;
-	std::cout << "Prenom : " << conducteur.getPrenom() << std::endl;
-	std::cout << "Annee de naissance : " << conducteur.getAnneeNaissance() << std::endl;
-	std::cout << "Age : " << conducteur.getAge() << " ans" << std::endl;:*/
+    // Ajout des motos au conducteur
+    c.ajouterMoto(m1);
+    c.ajouterMoto(m2);
 
+    // Affichage des infos
+    c.afficherInfos();
 
-	//Moto* m1 = new Moto("Panigale", "V4",300); //ajout de la )première moto
-	//Moto* m2 = new Moto("DUZI griso", "j'y connais rien", 600)//ajout de la deuxieme moto
-
-
-  /*std::cout << "Moto1 : " << Moto.getMoto() << std::endl;
-	std::cout << "Type : " << Moto.get() << std::endl;
-	std::cout << "Puissance : " << Moto.getPuisance() << std::endl;*/
-
-
-
-
-	//Conducteur.ajouterMoto(m1); //ajouter moto1 au conducteur(exemple il prend cette moto ajd)
-	//Conducteur.ajouterMoto(m2);//ajouter moto2 au conducteur 
-
-
-
-};
+    return 0;
+}
