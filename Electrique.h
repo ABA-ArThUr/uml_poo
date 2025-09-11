@@ -35,7 +35,6 @@ public:
     std::string getTensionMax();
     void setTensionMax(std::string nouveauTensionMax);
     std::string getTensionMax(float puissance);
-	void setTensionMax(float puissance, std::string nouveauTensionMax);
-
-#endif// Ajout de l'accolade fermante manquante pour la classe Electrique
+    void setTensionMax(float puissance, std::string nouveauTensionMax);
 };
+#endif
