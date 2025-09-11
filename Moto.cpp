@@ -45,7 +45,7 @@ Moto::Moto(std::string Poids, std::string Moteur) {
  */
 Moto::~Moto() {
 
-	cout << "Destrcution du Moto Moto" << this->Poids << endl;
+	cout << "Destrcution du Moto Moto" << this->Poids << " " << this->Moteur << endl;
 }
 
 /**
@@ -54,9 +54,10 @@ Moto::~Moto() {
  * \param entre Objet de type Moto
  */
 Moto::Moto(const Moto& miss)
-{f
-	cout << "Copie du Moto Moto" << endl;
-	this->Puissance = miss.Puissance;
+{
+	cout << "Copie de la Moto" << endl;
+	this->Poids = miss.Poids;
+	this->Moteur = miss.Moteur;
 }
 
 /**
@@ -67,29 +68,50 @@ Moto::Moto(const Moto& miss)
  */
 Moto& Moto::operator=(const Moto& miss)
 {
-	cout << "Affectation du Moto Moto" << std::endl;
-	if (this != &miss)  // Pour éviter que l'on ne se recopie pas...
+	cout << "Affectation de la Moto" << std::endl;
+	if (this != &miss)
 	{
-		this->Puissance = miss.Puissance;
+		this->Poids = miss.Poids;
+		this->Moteur = miss.Moteur;
 	}
 	return *this;
 }
 
+
 /**
- * \brief Accesseur de l'attribut Puissancee
- *
- * \return du Moto Moto
- */
-std::string Moto::getPuissance()
+* \brief Accesseur de l'attribut Moteur
+*
+* \return de la Moto
+*/
+std::string Moto::getMoteur()
 {
-	return this->Puissance;
+	return this->Moteur;
 }
 
 /**
- * \brief Mutateur de l'attribut Puissancee
+ * \brief Accesseur de l'attribut Poids
  *
- * \param NouveauMoto NouveauMotoMoto
+ * \return du Moto Moto
  */
-void  Moto::setPuissance(std::string NouveauMoto) {
-	this->Puissance = NouveauMoto;
+std::string Moto::getPoids()
+{
+	return this->Poids;
+}
+
+/**
+ * \brief Mutateur de l'attribut Moteur
+ *
+ * \param NouveauMoto NouveauMoteur
+ */
+void  Moto::setMoteur(std::string NouveauMoteur) {
+	this->Moteur = NouveauMoteur;
+}
+
+/**
+ * \brief Mutateur de l'attribut Poids
+ *
+ * \param NouveauMoto NouveauPoids
+ */
+void  Moto::setPoids(std::string NouveauPoids) {
+	this->Poids = NouveauPoids;
 }
