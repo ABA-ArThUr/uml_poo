@@ -1,34 +1,48 @@
-﻿#ifndef CONDUCTEUR_H
+﻿/*****************************************************************//**
+ * \file   Conducteur.h
+ * \brief  Declaration de la classe Conducteur
+ *
+ * \author [Ton Nom]
+ * \date   September 2025
+ ********************************************************************/
+
+#ifndef CONDUCTEUR_H
 #define CONDUCTEUR_H
-//#include "Moto.h"
+
+#include <iostream>
 #include <string>
+#include <vector>
+#include "Moto.h"
 
-class Conducteur {  //création de la class conducteur
+ /*! \class Conducteur
+    * \brief classe representant un conducteur avec un nom, prenom et annee de naissance
+    */
+class Conducteur
+{
 private:
-    std::string nom;    //creation de l'objet nom
-    std::string prenom;  //création de l'objet prenom
-    int anneeNaissance;  //utilisation de int car l'année de naissance sera un chiffre / création de cette objet
-   // std::vector<Moto*> motos;
+    std::string nom;
+    std::string prenom;
+    int anneeNaissance;
+    std::vector<Moto> motos; // liste des motos possedées
+
 public:
-    
-    Conducteur(const std::string& nom, const std::string& prenom, int anneeNaissance);   //tout ce qui fait partie du conducteur
+    // Constructeurs
+    Conducteur();
+    Conducteur(std::string nom, std::string prenom, int anneeNaissance);
+    ~Conducteur();
 
-   //initialisation de variables 
-    std::string getNom() const;// creation getNome
-    std::string getPrenom() const;//creation getprenom
-    int getAnneeNaissance() const;//creation getNaissance
-    int getAge() const;// utilssation de l'age pour la naissance      Const sert a declarer quelque chose qui ne pourra pas voir jamais changer dans le temps
+    // Getters / Setters
+    std::string getNom();
+    std::string getPrenom();
+    int getAnneeNaissance();
 
-    
-    void setNom(const std::string& n); //utilisation             Void na pas de valeur de retour pour executer ce qui est seulement, demander
-    void setPrenom(const std::string& p);
+    void setNom(std::string nouveauNom);
+    void setPrenom(std::string nouveauPrenom);
     void setAnneeNaissance(int annee);
 
-
-   // void ajouterMoto(Moto* m);
-  //  void retirerMoto(Moto* m);
-   
-    void afficherInfos() const;
+    // Gestion des motos
+    void ajouterMoto(const Moto& m);
+    void afficherInfos();
 };
 
-#endif 
+#endif
