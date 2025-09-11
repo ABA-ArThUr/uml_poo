@@ -14,10 +14,11 @@
 #include "Thermique.h"
 #include "Electrique.h"
 
+
 /*! \class Moteur
    * \brief classe representant une Moteur. 3 attributs prives
    */
-class Moteur
+class Moteur : public Thermique, public Electrique
 {
 private:
     /**
