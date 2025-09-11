@@ -6,8 +6,8 @@
 * \date   september 2025
 * ********************************************************************/
 
-#ifndef Moteur_H
-#define Moteur_H
+#ifndef Moto_H
+#define Moto_H
 
 #include <iostream>
 #include <string>
@@ -19,13 +19,8 @@
 class Moto
 {
 private:
-    /**
-     * Membre prive Moteur : contient le moteur pour la Moteur
-     */
-    std::string Moteur;
-    /**
-     * Membre prive Poids : contient le Poids de la Moteur
-     */
+	
+	Moteur moteur;
     std::string Poids;
 
 protected:
@@ -36,11 +31,10 @@ public:
 	~Moto();
 	Moto(const Moto& miss);
 	Moto& operator = (const Moto& miss);
-	Moto(std::string Poids, std::string Moteur);
 	std::string getPoids();
 	void setPoids(std::string nouveauPoids);
-	std::string getMoteur();
-	void setMoteur(std::string nouveauMoteur);
+	Moto(std::string Poids);
+
 };  
 
 
