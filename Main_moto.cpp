@@ -11,13 +11,14 @@ int main() {
 
 	Moteur moteurGenerique("150"); 
 
-	Moteur moteurGenerique("150");
+	Moto maMoto("180 kg");
 
-	Moto maMoto("180 kg", "Moteur Electrique");
+
 
     std::cout << "Moteur Electrique - Tension max: " << moteurElectrique.getTensionMax() << " V" << std::endl;
     std::cout << "Moteur Thermique - Cylindree: " << moteurThermique.getCylindree() << " cm3" << std::endl;
 	std::cout << "Moteur Generique - Puissance: " << moteurGenerique.getPuissance() << " CV" << std::endl;
+	std::cout << "Moto - Poids: " << maMoto.getPoids() << std::endl;
 
     return 0;
 }
