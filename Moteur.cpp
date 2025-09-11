@@ -10,6 +10,8 @@
  *********************************************************************/
 
 #include "Moteur.h"
+#include "Thermique.h"
+#include "Electrique.h"
 
 
 
