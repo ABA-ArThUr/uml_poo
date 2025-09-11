@@ -11,6 +11,8 @@
 
 #include <iostream>
 #include <string>
+#include "Thermique.h"
+#include "Electrique.h"
 
 /*! \class Moteur
    * \brief classe representant une Moteur. 3 attributs prives
