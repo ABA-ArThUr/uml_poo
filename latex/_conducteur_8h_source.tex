@@ -1,0 +1,44 @@
+\doxysection{Conducteur.\+h}
+\hypertarget{_conducteur_8h_source}{}\label{_conducteur_8h_source}\mbox{\hyperlink{_conducteur_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ CONDUCTEUR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CONDUCTEUR\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Moto.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }Conducteur}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ nom;}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ prenom;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ anneeNaissance;}
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<Moto>\ motos;\ \textcolor{comment}{//\ liste\ des\ motos\ possedées}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Constructeurs}}
+\DoxyCodeLine{00030\ \ \ \ \ Conducteur();}
+\DoxyCodeLine{00031\ \ \ \ \ Conducteur(std::string\ nom,\ std::string\ prenom,\ \textcolor{keywordtype}{int}\ anneeNaissance);}
+\DoxyCodeLine{00032\ \ \ \ \ \string~Conducteur();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Getters\ /\ Setters}}
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ getNom();}
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ getPrenom();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ getAnneeNaissance();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setNom(std::string\ nouveauNom);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setPrenom(std::string\ nouveauPrenom);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setAnneeNaissance(\textcolor{keywordtype}{int}\ annee);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Gestion\ des\ motos}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ ajouterMoto(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_moto}{Moto}}\&\ m);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherInfos();}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

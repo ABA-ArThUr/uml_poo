@@ -1,0 +1,35 @@
+\doxysection{Moteur.\+h}
+\hypertarget{_moteur_8h_source}{}\label{_moteur_8h_source}\mbox{\hyperlink{_moteur_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ Moteur\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ Moteur\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_thermique_8h}{Thermique.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_electrique_8h}{Electrique.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_thermique_a4c7df4f9d87cf3795928170d123a7f60}{Thermique}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_electrique_a9f9c55b0f36a98cc5b5fd784783f4017}{Electrique}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ Puissance;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{/*Classe\ sous\ forme\ canonique*/}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_moteur_abd73219b2994b455f2e3304d4d879f36}{\string~Moteur}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}\&\ miss);}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}\&\ \mbox{\hyperlink{class_moteur_adf074ee8a43f71e9d5dbd2ee43ab381d}{operator\ =\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}\&\ miss);}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_moteur_a90033e47e0caf0b8808d7cd7ba53da2c}{Moteur}}(std::string\ Puissance);}
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{class_moteur_a85cdc91c48e926a0f0a78cac00b4f2a0}{getPuissance}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_moteur_ac4156536a15dc5129c7a841dc902c22d}{setPuissance}}(std::string\ nouveauPuissance);}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
